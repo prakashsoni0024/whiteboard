@@ -3,9 +3,9 @@ import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid"; // For unique note IDs
 
-// const socket = io("https://whiteboard-backend-2.onrender.com");
+const socket = io(https://whiteboard1-zydi.onrender.com");
 
-const socket = io("http://localhost:5000");
+//const socket = io("http://localhost:5000");
 
 let lastX = 0;
 let lastY = 0;
@@ -381,3 +381,4 @@ const Whiteboard = () => {
 };
 
 export default Whiteboard;
+
