@@ -300,8 +300,8 @@ const Whiteboard = () => {
       onClick={() => {
         const newNote = {
           id: uuidv4(),
-          x: 100,
-          y: 100,
+          x: 200,
+          y: 700,
           text: "New Note",
           color: selectedColor,
         };
@@ -381,6 +381,7 @@ const Whiteboard = () => {
 };
 
 export default Whiteboard;
+
 
 
 
