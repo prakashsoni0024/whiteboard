@@ -301,7 +301,7 @@ const Whiteboard = () => {
         const newNote = {
           id: uuidv4(),
           x: 100,
-          y: 100,
+          y: 400,
           text: "New Note",
           color: selectedColor,
         };
