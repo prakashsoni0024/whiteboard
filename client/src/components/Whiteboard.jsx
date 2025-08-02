@@ -365,29 +365,24 @@ const Whiteboard = () => {
       </div>
 
       {/* Canvas */}
-      <canvas
-  ref={canvasRef}
-  onMouseDown={startDrawing}
-  onMouseMove={draw}
-  onMouseUp={stopDrawing}
-  onMouseOut={stopDrawing}
-  onTouchStart={startTouchDrawing}
-  onTouchMove={touchDraw}
-  onTouchEnd={stopDrawing}
-  className="border-2 border-black block bg-white touch-none"
-  style={{
-    width: "100vw",
-    height: "100vh",
-    display: "block",
-    touchAction: "none", // prevent scrolling while drawing
-  }}
-/>
+       <canvas
+        ref={canvasRef}
+        onMouseDown={startDrawing}
+        onMouseMove={draw}
+        onMouseUp={stopDrawing}
+        onMouseOut={stopDrawing}
+        onTouchStart={startTouchDrawing}
+        onTouchMove={touchDraw}
+        onTouchEnd={stopDrawing}
+        className="border-2 border-black block bg-white w-screen h-screen touch-none"
+      /> 
 
     </div>
   );
 };
 
 export default Whiteboard;
+
 
 
 
