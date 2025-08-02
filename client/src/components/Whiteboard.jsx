@@ -351,7 +351,7 @@ const Whiteboard = () => {
               suppressContentEditableWarning
               className="whitespace-pre-wrap break-words focus:outline-none"
               onBlur={(e) => {
-                const updated = { ...note, text: e.target.innerText };
+                const updated = { ...note, center: e.target.innerText };
                 setNotes((prev) =>
                   prev.map((n) => (n.id === updated.id ? updated : n))
                 );
@@ -381,6 +381,7 @@ const Whiteboard = () => {
 };
 
 export default Whiteboard;
+
 
 
 
