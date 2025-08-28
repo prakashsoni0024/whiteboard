@@ -3,9 +3,9 @@ import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid"; // For unique note IDs
 
-const socket = io("https://whiteboard3-y6mh.onrender.com");
+  //const socket = io("https://whiteboard3-y6mh.onrender.com");
 
-// const socket = io("http://localhost:5000");
+   const socket = io("http://localhost:5000");
 
 let lastX = 0;
 let lastY = 0;
@@ -20,6 +20,7 @@ const Whiteboard = () => {
   const { roomId } = useParams();
   const [notes, setNotes] = useState([]);
   const [selectedColor, setSelectedColor] = useState("#ffff88");
+  
 
   // Load notes from localStorage when app starts
   useEffect(() => {
@@ -314,11 +315,7 @@ const Whiteboard = () => {
           <div
             key={note.id}
             className="absolute p-3 rounded-lg w-[180px] shadow-lg cursor-move bg-opacity-90"
-            style={{
-              left: note.x,
-              bottom: note.y,
-              backgroundColor: note.color,
-            }}
+            style={{ left: note.x, bottom: note.y, backgroundColor: note.color }}
             draggable
             onDragEnd={(e) => {
               const updated = { ...note, x: e.clientX, y: e.clientY };
@@ -378,16 +375,3 @@ const Whiteboard = () => {
 };
 
 export default Whiteboard;
-
-
-
-
-
-
-
-
-
-
-
-
-
