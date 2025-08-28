@@ -332,10 +332,8 @@ const Whiteboard = () => {
             <div className="flex justify-end mb-1">
               <button
                 onClick={() => {
-                  const updatedNotes = notes.filter((n) => n.id !== note.id);
-                  setNotes(updatedNotes);
+                  setNotes((prev) => prev.filter((n) => n.id !== note.id));
                   socket.emit("deleteNote", note.id);
-                  localStorage.setItem("notes", JSON.stringify(updatedNotes)); // yahi key hai
                 }}
                 className="text-red-500 font-bold hover:text-red-700"
                 title="Delete Note"
@@ -380,6 +378,7 @@ const Whiteboard = () => {
 };
 
 export default Whiteboard;
+
 
 
 
