@@ -9,13 +9,11 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleJoin = () => {
-    if (roomId.trim() >= 4) {
+    if (roomId.trim().length >= 4) {
       navigate(`/whiteboard/${roomId}`);
-      
-    } 
-    else {
+    } else {
       alert("Please enter a valid Room ID (at least 4 characters).");
-     }
+    }
   };
 
   return (
@@ -107,5 +105,6 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
